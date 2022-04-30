@@ -1,11 +1,59 @@
-import type { NextPage } from 'next';
-import styles from '../styles/Home.module.css';
+import BasicTemplateLayout from '@components/layouts/basic-template';
 
-const Home: NextPage = () => {
+const Home = () => {
   return (
-    <div className={styles.container}>
-      <p>this is Home page</p>
-    </div>
+    <BasicTemplateLayout>
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure vel veritatis optio, hic unde
+        ullam eius quisquam maiores nisi culpa? At adipisci numquam eveniet ipsum necessitatibus
+        eligendi earum, accusantium laborum?
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure vel veritatis optio, hic unde
+        ullam eius quisquam maiores nisi culpa? At adipisci numquam eveniet ipsum necessitatibus
+        eligendi earum, accusantium laborum?
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure vel veritatis optio, hic unde
+        ullam eius quisquam maiores nisi culpa? At adipisci numquam eveniet ipsum necessitatibus
+        eligendi earum, accusantium laborum?
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure vel veritatis optio, hic unde
+        ullam eius quisquam maiores nisi culpa? At adipisci numquam eveniet ipsum necessitatibus
+        eligendi earum, accusantium laborum?
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure vel veritatis optio, hic unde
+        ullam eius quisquam maiores nisi culpa? At adipisci numquam eveniet ipsum necessitatibus
+        eligendi earum, accusantium laborum?
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure vel veritatis optio, hic unde
+        ullam eius quisquam maiores nisi culpa? At adipisci numquam eveniet ipsum necessitatibus
+        eligendi earum, accusantium laborum?
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure vel veritatis optio, hic unde
+        ullam eius quisquam maiores nisi culpa? At adipisci numquam eveniet ipsum necessitatibus
+        eligendi earum, accusantium laborum?
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure vel veritatis optio, hic unde
+        ullam eius quisquam maiores nisi culpa? At adipisci numquam eveniet ipsum necessitatibus
+        eligendi earum, accusantium laborum?
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure vel veritatis optio, hic unde
+        ullam eius quisquam maiores nisi culpa? At adipisci numquam eveniet ipsum necessitatibus
+        eligendi earum, accusantium laborum?
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure vel veritatis optio, hic unde
+        ullam eius quisquam maiores nisi culpa? At adipisci numquam eveniet ipsum necessitatibus
+        eligendi earum, accusantium laborum?
+      </div>
+    </BasicTemplateLayout>
   );
 };
 

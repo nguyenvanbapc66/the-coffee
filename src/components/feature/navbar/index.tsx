@@ -49,7 +49,7 @@ const Navbar = () => {
   }, [dropdownMenuRef, handleClickOutside, handleKeyPress]);
 
   return (
-    <header className="font-regular flex items-center sticky top-0 bg-[#fff] px-20 py-4 opacity-90">
+    <header className="font-regular flex items-center sticky top-0 bg-[#fff] px-20 py-4 opacity-90 z-10">
       <Image src={logo} alt="" className="cursor-pointer" onClick={() => push('/')} />
       <div className="flex flex-row items-center ml-16">
         {navbarConfig.map((nav) => {
@@ -93,7 +93,7 @@ const Navbar = () => {
                                 <a
                                   className={clsx(
                                     styles.grandItemContent,
-                                    pathname.includes(navGrandChild.id) && 'text-ea8025',
+                                    pathname.includes(navGrandChild.id) && 'text-[#ea8025]',
                                   )}>
                                   {navGrandChild.name}
                                 </a>

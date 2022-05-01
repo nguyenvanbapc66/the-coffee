@@ -1,0 +1,27 @@
+.menuCardItem {
+  border-radius: 10px;
+  box-shadow: 0 4px 10px 4px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.6);
+  min-height: 486px;
+  padding: 16px;
+}
+
+.buttonDetail {
+  min-height: 40px;
+  background: #ea8025;
+  color: #fff;
+  padding: 8px 0;
+  border-radius: 6px;
+  border: none;
+  margin-top: 80px;
+
+  &:hover {
+    color: #fff;
+    background: #ea8025;
+  }
+
+  &:focus {
+    color: #fff;
+    background: #ea8025;
+  }
+}

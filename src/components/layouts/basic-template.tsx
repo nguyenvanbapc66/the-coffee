@@ -12,7 +12,7 @@ const BasicTemplateLayout = ({ children }: LayoutProps) => {
     <div>
       <Navbar />
       {children}
-      <footer className="bg-[#000000D9] text-[#fff]">
+      <footer className="bg-[#000000D9] text-[#fff] mt-10">
         <CustomContainer>
           <Row className="py-10">
             {footerConfig.map(({ title, detailContract }) => (

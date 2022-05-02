@@ -1,11 +1,7 @@
-import BasicTemplateLayout from '@components/layouts/basic-template';
+import CoffeePageContainer from '@components/modules/coffee-page-container';
 
 const AtHomeCoffee = () => {
-  return (
-    <BasicTemplateLayout>
-      <div>this is ca phe tai nha page</div>
-    </BasicTemplateLayout>
-  );
+  return <CoffeePageContainer />;
 };
 
 export default AtHomeCoffee;

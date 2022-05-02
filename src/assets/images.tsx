@@ -10,9 +10,14 @@ export const slider = {
   image4: require('./imgs/slider4.png'),
 };
 
+export const banner = {
+  coffee: require('./imgs/banner-coffee-page.png'),
+};
+
 export type ListTeaCoffeeType = {
   name: string;
   price: number;
+  salePrice?: number;
   urlImage: string;
 };
 export const listTeaCoffee: ListTeaCoffeeType[] = [
@@ -22,6 +27,69 @@ export const listTeaCoffee: ListTeaCoffeeType[] = [
   { name: 'Cà Phê Đen Đá', price: 29000, urlImage: require('./imgs/tea-coffee4.png') },
   { name: 'Cà Phê Sữa Đá', price: 29000, urlImage: require('./imgs/tea-coffee5.png') },
   { name: 'Bánh Mì VN Thịt Nguội', price: 29000, urlImage: require('./imgs/vn-bread.png') },
+];
+
+export const listPacketCoffee: ListTeaCoffeeType[] = [
+  {
+    name: 'Cà Phê Rang Xay Original 1 250gr',
+    salePrice: 49000,
+    price: 59000,
+    urlImage: require('./imgs/packet-coffee1.png'),
+  },
+  {
+    name: 'Cà Phê Hòa Tan Đậm Vị Việt Túi 40x16G',
+    price: 98000,
+    urlImage: require('./imgs/packet-coffee2.png'),
+  },
+  {
+    name: 'Cà Phê Sữa Đá Hòa Tan Hộp 10 gói',
+    price: 44000,
+    salePrice: 39000,
+    urlImage: require('./imgs/packet-coffee3.png'),
+  },
+  {
+    name: 'Cà Phê Sữa Đá Hòa Tan Đậm Vị Hộp 18 gói x 16gr',
+    price: 48000,
+    salePrice: 39000,
+    urlImage: require('./imgs/packet-coffee4.png'),
+  },
+  {
+    name: 'Cà Phê Rich Finish Gu Đậm Tinh Tế 350gr',
+    price: 89000,
+    salePrice: 49000,
+    urlImage: require('./imgs/packet-coffee5.png'),
+  },
+  {
+    name: 'Cà Phê Peak Flavor Hương Thơm Đỉnh Cao 350gr',
+    price: 89000,
+    salePrice: 49000,
+    urlImage: require('./imgs/packet-coffee6.png'),
+  },
+  {
+    name: 'Cà Phê Peak Flavor Hương Thơm Đỉnh Cao 350gr',
+    price: 89000,
+    salePrice: 49000,
+    urlImage: require('./imgs/packet-coffee7.png'),
+  },
+  { name: 'Cà Phê Arabica', price: 98000, urlImage: require('./imgs/packet-coffee8.png') },
+  {
+    name: 'Cà phê sữa đá pack 6 lon',
+    price: 83000,
+    salePrice: 69000,
+    urlImage: require('./imgs/packet-coffee9.png'),
+  },
+  {
+    name: 'Thùng 24 Lon Cà Phê Sữa Đá',
+    price: 330000,
+    salePrice: 269000,
+    urlImage: require('./imgs/packet-coffee10.png'),
+  },
+  {
+    name: 'Cà Phê Sữa Đá Hòa Tan Túi 25 x 22gr',
+    price: 98000,
+    salePrice: 79000,
+    urlImage: require('./imgs/packet-coffee11.png'),
+  },
 ];
 
 export type ListHiTeaCoffeeType = {

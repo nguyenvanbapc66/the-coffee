@@ -2,7 +2,7 @@ import { Carousel } from 'antd';
 import Image from 'next/image';
 import clsx from 'clsx';
 
-import BasicTemplateLayout from '@components/layouts/basic-template';
+import { BasicTemplateLayout, CustomContainer } from '@components/layouts';
 import {
   hiTeaLogo,
   listHiTeaCoffee,
@@ -48,7 +48,9 @@ const HomeContainer = () => {
       <Carousel autoplay swipeToSlide draggable>
         {renderImageSlider()}
       </Carousel>
-      <main className={clsx('my-20', styles.menuList)}>{renderTeaCoffeeImages()}</main>
+      <CustomContainer className={clsx('my-20', styles.menuList)}>
+        {renderTeaCoffeeImages()}
+      </CustomContainer>
       <section className="bg-[#FFE9D4] py-16 mb-20">
         <div className="flex flex-col items-center text-center">
           <div className="max-w-[400px]">
@@ -62,16 +64,18 @@ const HomeContainer = () => {
           </p>
           <p className="font-semibold text-[18px] pt-4">Thử đi chờ chi!</p>
         </div>
-        <div className={styles.menuFirstCardList}>
-          {formatDataHiTeaCoffee().itemsOfFirstRow.map((data, index) => (
-            <MenuItemCard key={index} data={data} />
-          ))}
-        </div>
-        <div className={styles.menuSecondCardList}>
-          {formatDataHiTeaCoffee().itemsOfSecondRow.map((data, index) => (
-            <MenuItemCard key={index} data={data} className="max-w-[370px]" />
-          ))}
-        </div>
+        <CustomContainer>
+          <div className={styles.menuFirstCardList}>
+            {formatDataHiTeaCoffee().itemsOfFirstRow.map((data, index) => (
+              <MenuItemCard key={index} data={data} />
+            ))}
+          </div>
+          <div className={styles.menuSecondCardList}>
+            {formatDataHiTeaCoffee().itemsOfSecondRow.map((data, index) => (
+              <MenuItemCard key={index} data={data} className="max-w-[370px]" />
+            ))}
+          </div>
+        </CustomContainer>
       </section>
     </BasicTemplateLayout>
   );

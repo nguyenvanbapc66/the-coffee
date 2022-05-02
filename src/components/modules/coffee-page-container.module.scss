@@ -1,0 +1,6 @@
+.menuList {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 370px 370px;
+  gap: 40px 30px;
+}

@@ -1,11 +1,7 @@
-import BasicTemplateLayout from '@components/layouts/basic-template';
+import AllMenuContainer from '@components/modules/all-menu-container';
 
 const VnCoffee = () => {
-  return (
-    <BasicTemplateLayout>
-      <div>this is ca phe viet nam page</div>
-    </BasicTemplateLayout>
-  );
+  return <AllMenuContainer />;
 };
 
 export default VnCoffee;

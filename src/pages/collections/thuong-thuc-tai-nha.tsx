@@ -1,7 +1,7 @@
 import AllMenuContainer from '@components/modules/all-menu-container';
 
-const AllOfCollections = () => {
+const VnCoffeePage = () => {
   return <AllMenuContainer />;
 };
 
-export default AllOfCollections;
+export default VnCoffeePage;

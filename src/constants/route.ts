@@ -7,3 +7,5 @@ export const atHomeMenuKey = 'thuong-thuc-tai-nha';
 export const coffeeAtHomeMenuKey = 'ca-phe-tai-nha';
 export const giftCollectionsMenuKey = 'bo-suu-tap-qua-tang';
 export const storeMenuKey = 'danh-sach-cua-hang';
+
+export const isChild = 'isChild';

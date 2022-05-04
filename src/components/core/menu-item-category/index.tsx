@@ -9,14 +9,16 @@ import styles from './menu-item-category.module.scss';
 
 interface MenuItemCategoryProps extends RowProps {
   data: ListTeaCoffeeType;
+  size?: 'large' | 'small';
 }
 
-const MenuItemCategory = ({ data, ...props }: MenuItemCategoryProps) => {
+const MenuItemCategory = ({ data, size, ...props }: MenuItemCategoryProps) => {
   return (
-    <div {...props} className={clsx('cursor-pointer', props.className)}>
+    <div {...props} className={clsx('cursor-pointer max-w-[270px]', props.className)}>
       <Link href={'/'}>
         <a className="hover:text-[#ea8025]">
-          <div className={styles.menuItem}>
+          <div
+            className={clsx(styles.menuItem, size === 'large' ? 'md:w-[270px] sm:w-[170px]' : '')}>
             <Image src={data.urlImage} className="rounded-2xl" />
           </div>
           <p className="font-semibold pt-3">{data.name}</p>

@@ -51,7 +51,7 @@ const HomeContainer = () => {
       <CustomContainer className={clsx('my-20', styles.menuList)}>
         {renderTeaCoffeeImages()}
       </CustomContainer>
-      <section className="bg-[#FFE9D4] py-16 mb-20">
+      <section className="bg-[#FFE9D4] py-16">
         <div className="flex flex-col items-center text-center">
           <div className="max-w-[400px]">
             <Image src={hiTeaLogo} />

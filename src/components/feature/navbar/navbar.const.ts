@@ -8,7 +8,7 @@ import {
   menuKey,
   storeMenuKey,
   vnCoffeeMenuKey,
-} from '../../../constants/route';
+} from '../../../constants/route.const';
 
 export type NavbarType = {
   id: string;

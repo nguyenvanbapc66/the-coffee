@@ -15,7 +15,7 @@ interface MenuItemCategoryProps extends RowProps {
 const MenuItemCategory = ({ data, size, ...props }: MenuItemCategoryProps) => {
   return (
     <div {...props} className={clsx('cursor-pointer max-w-[270px]', props.className)}>
-      <Link href={'/'}>
+      <Link href={data.path}>
         <a className="hover:text-[#ea8025]">
           <div
             className={clsx(styles.menuItem, size === 'large' ? 'md:w-[270px] sm:w-[170px]' : '')}>

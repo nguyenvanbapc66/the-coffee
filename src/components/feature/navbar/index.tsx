@@ -8,16 +8,31 @@ import { navbarConfig } from './navbar.const';
 import { logo } from 'src/assets/images';
 import styles from './navbar.module.scss';
 import { CaretDownIcon } from '@components/icons';
-import { isNil } from 'src/utils/helpers';
+import { getDataFromStorage, isNil } from 'src/utils/helpers';
 import { CustomContainer } from '@components/layouts';
+import { CartIcon } from '@components/icons/cart-icon';
+import { Button } from 'antd';
+import { dataShippingStorageKey } from 'src/constants/route.const';
 
 type StoreDropdownType = {
   isOpen: boolean;
   dropdownPops?: string;
 };
 
+type DataShippingType = {
+  name: string;
+  provinceName: string;
+  districtName: string;
+  communeName: string;
+  address: string;
+  price: string;
+  size: string;
+  topping: string;
+};
+
 const Navbar = () => {
   const [storeDropdown, setStoreDropdown] = useState<StoreDropdownType>({} as StoreDropdownType);
+  const [openCartDropdown, setOpenCartDropdown] = useState<boolean>(false);
 
   const { pathname, push } = useRouter();
   const dropdownMenuRef = useRef<HTMLDivElement>(null);
@@ -38,6 +53,32 @@ const Navbar = () => {
   const handleKeyPress = useCallback((event: KeyboardEvent) => {
     if (event.key === 'Escape') handleOpenDropdown('', false);
   }, []);
+
+  const renderListBooking = () => {
+    const dataShipping: DataShippingType[] = getDataFromStorage(dataShippingStorageKey);
+    if (!dataShipping) return;
+    return dataShipping.map(
+      ({ address, communeName, districtName, price, provinceName, size, topping, name }) => (
+        <div className={styles.itemBooking}>
+          <div className="text-12 font-semibold text-gray-400">Delivering...</div>
+          <div className="font-bold">
+            {name}{' '}
+            <span className="text-14 font-medium">
+              ({size}, {topping})
+            </span>
+          </div>
+          <div className="text-[#ea8025]">{price}</div>
+          <div className="text-14">
+            {address}, {communeName}, {districtName}, {provinceName}
+          </div>
+        </div>
+      ),
+    );
+  };
+
+  const handleOpenCartDropdown = () => {
+    setOpenCartDropdown((prev) => !prev);
+  };
 
   useEffect(() => {
     document.addEventListener('click', handleClickOutside, true);
@@ -110,6 +151,15 @@ const Navbar = () => {
               </div>
             );
           })}
+          <div className="relative">
+            <Button
+              className="border-none"
+              shape="circle"
+              icon={<CartIcon width={20} height={20} className="cursor-pointer ml-1.5" />}
+              onClick={handleOpenCartDropdown}
+            />
+            {openCartDropdown && <div className="dropdown-menu">{renderListBooking()}</div>}
+          </div>
         </div>
       </CustomContainer>
     </header>

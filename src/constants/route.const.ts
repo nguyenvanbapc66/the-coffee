@@ -9,3 +9,6 @@ export const giftCollectionsMenuKey = 'bo-suu-tap-qua-tang';
 export const storeMenuKey = 'danh-sach-cua-hang';
 
 export const isChild = 'isChild';
+export const key = 'key';
+export const productIdKey = 'productId';
+export const dataShippingStorageKey = 'dataShipping';

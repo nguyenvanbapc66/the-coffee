@@ -22,3 +22,15 @@
     color: #ea8025;
   }
 }
+
+.itemBooking {
+  border-top: 1px solid rgb(156, 163, 175);
+  padding-top: 12px;
+  margin-top: 12px;
+
+  &:first-child {
+    padding-top: 0;
+    margin-top: 0;
+    border-top: none;
+  }
+}

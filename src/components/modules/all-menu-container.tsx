@@ -8,14 +8,14 @@ import styles from '../modules/all-menu-container.module.scss';
 
 const AllMenuContainer = () => {
   const renderListPacketCoffee = () => {
-    return Object.values(listPacketCoffee).map((data) => (
-      <MenuItemCategory data={data} size="large" />
+    return Object.values(listPacketCoffee).map((data, index) => (
+      <MenuItemCategory key={index} data={data} size="large" />
     ));
   };
 
   const renderListTeaCoffee = () => {
-    return Object.values(listTeaCoffee).map((data) => (
-      <MenuItemCategory data={data} size="large" />
+    return Object.values(listTeaCoffee).map((data, index) => (
+      <MenuItemCategory key={index} data={data} size="large" />
     ));
   };
 

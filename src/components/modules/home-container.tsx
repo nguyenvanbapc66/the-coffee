@@ -20,7 +20,11 @@ type NewListHiTeaCoffee = {
 
 const HomeContainer = () => {
   const renderImageSlider = () => {
-    return Object.values(slider).map((urlImage) => <Image key={urlImage} src={urlImage} />);
+    return Object.values(slider).map((urlImage) => (
+      <div key={urlImage}>
+        <Image src={urlImage} />
+      </div>
+    ));
   };
 
   const renderTeaCoffeeImages = () => {

@@ -5,7 +5,7 @@ import {
   machineCoffeeMenuKey,
   menuKey,
   vnCoffeeMenuKey,
-} from 'src/constants/route';
+} from 'src/constants/route.const';
 
 type SideBarConfigType = {
   title: string;

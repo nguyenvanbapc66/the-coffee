@@ -3,6 +3,8 @@ import Head from 'next/head';
 import 'antd/dist/antd.css';
 
 import '../styles/globals.scss';
+import { SWRConfig } from 'swr';
+import { laggy } from 'src/utils/swr-laggy';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -15,7 +17,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         <link rel="icon" href="/favicon.png" />
         <title>The Coffee</title>
       </Head>
-      <Component {...pageProps} />
+      <SWRConfig value={{ use: [laggy] }}>
+        <Component {...pageProps} />
+      </SWRConfig>
     </>
   );
 }

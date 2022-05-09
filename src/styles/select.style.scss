@@ -1,0 +1,24 @@
+.drop-down-custom {
+  .ant-select-item-option {
+    min-height: 40px;
+    &:not(:first-child) {
+      margin-top: 4px;
+    }
+    &:hover {
+      background: #f5f5fae5;
+      border-radius: 4px;
+    }
+    .ant-select-item-option-content {
+      padding-top: 2px;
+    }
+  }
+  .ant-select-item-option-selected,
+  .ant-select-item-option-selected:hover {
+    background: #3698fc;
+    border-radius: 4px;
+
+    .ant-select-item-option-content > * {
+      color: #fff !important;
+    }
+  }
+}

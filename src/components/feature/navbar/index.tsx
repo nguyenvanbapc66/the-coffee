@@ -77,6 +77,8 @@ const Navbar = () => {
   };
 
   const handleOpenCartDropdown = () => {
+    const dataCard = getDataFromStorage(dataShippingStorageKey);
+    if (!dataCard) return;
     setOpenCartDropdown((prev) => !prev);
   };
 
@@ -91,9 +93,11 @@ const Navbar = () => {
   }, [dropdownMenuRef, handleClickOutside, handleKeyPress]);
 
   return (
-    <header className="font-regular sticky top-0 left-0 bg-[#fff] py-4 opacity-90 z-10 border-b border-solid border-[#00000026]">
+    <header className="font-regular sticky top-0 left-0 bg-[#fff] opacity-90 z-10 border-b border-solid border-[#00000026]">
       <CustomContainer className="flex items-center">
-        <Image src={logo} alt="" className="cursor-pointer" onClick={() => push('/')} />
+        <div className={styles.logo}>
+          <Image src={logo} alt="" className="cursor-pointer" onClick={() => push('/')} />
+        </div>
         <div className="flex flex-row items-center ml-16">
           {navbarConfig.map((nav) => {
             if (!nav.children) {
@@ -155,7 +159,7 @@ const Navbar = () => {
             <Button
               className="border-none"
               shape="circle"
-              icon={<CartIcon width={20} height={20} className="cursor-pointer ml-1.5" />}
+              icon={<CartIcon width={20} height={20} className="ml-1.5" />}
               onClick={handleOpenCartDropdown}
             />
             {openCartDropdown && <div className="dropdown-menu">{renderListBooking()}</div>}

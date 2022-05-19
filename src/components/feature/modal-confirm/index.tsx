@@ -7,7 +7,7 @@ import styles from './modal-confirm.module.scss';
 import { DataConfirmType } from '@components/modules/product-detail-container';
 import { modalConfirmApi } from 'src/services/modal-confirm.services';
 import Image from 'next/image';
-import { formatPrice, getDataFromStorage, isEmpty, setDataToStorage } from 'src/utils/helpers';
+import { formatPrice, getDataFromStorage, setDataToStorage } from 'src/utils/helpers';
 import { sleep } from 'src/utils/async-helpers';
 import { dataShippingStorageKey } from 'src/constants/route.const';
 
@@ -205,7 +205,7 @@ const ModalConfirm = ({ setOpenPopup, dataConfirm, ...props }: ModalConfirmProps
             <p className="text-14 pl-2 py-2">Size</p>
           </div>
           <p className="text-18 pl-4">{dataConfirm.size}</p>
-          {!isEmpty(dataConfirm.topping) && (
+          {dataConfirm.topping.name && (
             <>
               <div
                 className="my-2"

@@ -23,7 +23,7 @@ const AllMenuContainer = () => {
     <BasicTemplateLayout>
       <SideBar>
         <div>
-          <Image src={slider.image3} />
+          <Image src={slider.image1} />
         </div>
         <div>
           <p className="text-[24px] font-bold py-5">Cà phê tại nhà</p>

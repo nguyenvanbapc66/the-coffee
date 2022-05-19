@@ -5,3 +5,5 @@ export * from './facebook-icon';
 export * from './location-icon';
 export * from './car-ship-icon';
 export * from './close-icon';
+export * from './arrow-right-icon';
+export * from './arrow-left-icon';

@@ -11,11 +11,9 @@ interface MenuItemCardProps extends RowProps {
 
 const MenuItemCard = ({ data, ...props }: MenuItemCardProps) => {
   return (
-    <div
-      {...props}
-      className={clsx(styles.menuCardItem, 'relative flex flex-col justify-end', props.className)}>
-      <div className="absolute top-[-115px]">
-        <Image src={data.urlImage} />
+    <div {...props} className={clsx(styles.menuCardItem, 'flex flex-col', props.className)}>
+      <div>
+        <Image src={data.urlImage} className="rounded-md" />
       </div>
       <p className="text-18 font-semibold mb-[6px]">{data.name}</p>
       <p>{data.description}</p>

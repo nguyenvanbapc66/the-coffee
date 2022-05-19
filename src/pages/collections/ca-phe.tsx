@@ -1,7 +1,7 @@
-import VnCoffeeContainer from '@components/modules/vn-coffee-container';
+import AllCoffeeContainer from '@components/modules/all-coffee-container';
 
 const VnCoffeePage = () => {
-  return <VnCoffeeContainer />;
+  return <AllCoffeeContainer />;
 };
 
 export default VnCoffeePage;

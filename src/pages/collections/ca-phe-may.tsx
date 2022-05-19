@@ -1,7 +1,7 @@
-import AllMenuContainer from '@components/modules/all-menu-container';
+import MachineCoffeeContainer from '@components/modules/machine-coffee-container';
 
 const VnCoffeePage = () => {
-  return <AllMenuContainer />;
+  return <MachineCoffeeContainer />;
 };
 
 export default VnCoffeePage;

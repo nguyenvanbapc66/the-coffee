@@ -52,7 +52,7 @@ const HomeContainer = () => {
       <Carousel autoplay swipeToSlide draggable>
         {renderImageSlider()}
       </Carousel>
-      <CustomContainer className={clsx('my-20', styles.menuList)}>
+      <CustomContainer className={clsx('mt-20 mb-10', styles.menuList)}>
         {renderTeaCoffeeImages()}
       </CustomContainer>
       <section className="bg-[#FFE9D4] py-16">

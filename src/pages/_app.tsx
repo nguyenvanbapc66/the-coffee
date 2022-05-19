@@ -15,7 +15,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="The Coffee" />
         <link rel="icon" href="/favicon.png" />
-        <title>The Coffee</title>
+        <title>Passenger Coffee</title>
       </Head>
       <SWRConfig value={{ use: [laggy] }}>
         <Component {...pageProps} />

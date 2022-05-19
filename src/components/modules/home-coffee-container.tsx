@@ -6,10 +6,10 @@ import { BasicTemplateLayout } from '@components/layouts';
 import { listPacketCoffee, slider } from 'src/assets/images';
 import styles from '../modules/all-menu-container.module.scss';
 
-const VnCoffeeContainer = () => {
+const HomeCoffeeContainer = () => {
   const renderListPacketCoffee = () => {
-    return Object.values(listPacketCoffee).map((data) => (
-      <MenuItemCategory data={data} size="large" />
+    return Object.values(listPacketCoffee).map((data, index) => (
+      <MenuItemCategory key={index} data={data} size="large" />
     ));
   };
 
@@ -28,4 +28,4 @@ const VnCoffeeContainer = () => {
   );
 };
 
-export default VnCoffeeContainer;
+export default HomeCoffeeContainer;

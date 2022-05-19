@@ -10,16 +10,21 @@ import styles from './menu-item-category.module.scss';
 interface MenuItemCategoryProps extends RowProps {
   data: ListTeaCoffeeType;
   size?: 'large' | 'small';
+  resizeImage?: string;
 }
 
-const MenuItemCategory = ({ data, size, ...props }: MenuItemCategoryProps) => {
+const MenuItemCategory = ({ data, size, resizeImage, ...props }: MenuItemCategoryProps) => {
   return (
     <div {...props} className={clsx('cursor-pointer max-w-[270px]', props.className)}>
       <Link href={data.path}>
         <a className="hover:text-[#ea8025]">
           <div
-            className={clsx(styles.menuItem, size === 'large' ? 'md:w-[270px] sm:w-[170px]' : '')}>
-            <Image src={data.urlImage} className="rounded-2xl" />
+            className={clsx(
+              styles.menuItem,
+              resizeImage,
+              size === 'large' ? 'md:w-[270px] sm:w-[170px]' : '',
+            )}>
+            <Image src={data.urlImage} />
           </div>
           <p className="font-semibold pt-3">{data.name}</p>
         </a>

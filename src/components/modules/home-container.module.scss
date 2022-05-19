@@ -1,8 +1,7 @@
 .menuList {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 340px 340px;
-  gap: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .menuFirstCardList {

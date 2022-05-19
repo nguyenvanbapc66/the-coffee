@@ -1,7 +1,7 @@
-import AllMenuContainer from '@components/modules/all-menu-container';
+import VietNamCoffeeContainer from '@components/modules/viet-nam-coffee-container';
 
 const VnCoffee = () => {
-  return <AllMenuContainer />;
+  return <VietNamCoffeeContainer />;
 };
 
 export default VnCoffee;

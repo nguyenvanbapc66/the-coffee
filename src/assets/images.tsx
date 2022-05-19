@@ -23,37 +23,37 @@ export type ListTeaCoffeeType = {
 };
 export const listTeaCoffee: ListTeaCoffeeType[] = [
   {
-    name: 'Hi-Tea Đào',
+    name: 'Trà sữa ô long kem trứng',
     price: 45000,
     urlImage: require('./imgs/tea-coffee1.png'),
     path: '/products/1',
   },
   {
-    name: 'Hi-Tea Yuzu',
+    name: 'Trà đào cam sả',
     price: 45000,
     urlImage: require('./imgs/tea-coffee2.png'),
     path: '/products/2',
   },
   {
-    name: 'Hi-Tea Yuzu',
+    name: 'Bạc xỉu',
     price: 58000,
     urlImage: require('./imgs/tea-coffee3.png'),
     path: '/products/2',
   },
   {
-    name: 'Cà Phê Đen Đá',
+    name: 'Matcha chanh đá',
     price: 29000,
     urlImage: require('./imgs/tea-coffee4.png'),
     path: '/products/2',
   },
   {
-    name: 'Cà Phê Sữa Đá',
+    name: 'Sữa tươi trân châu đường đen',
     price: 29000,
     urlImage: require('./imgs/tea-coffee5.png'),
     path: '/products/2',
   },
   {
-    name: 'Bánh Mì VN Thịt Nguội',
+    name: 'Croissant',
     price: 29000,
     urlImage: require('./imgs/vn-bread.png'),
     path: '/products/2',
@@ -145,54 +145,131 @@ export type ListHiTeaCoffeeType = {
 };
 export const listHiTeaCoffee: ListHiTeaCoffeeType[] = [
   {
-    name: 'Hi-Tea Đào',
+    name: 'Cà phê cốt dừa',
     urlImage: require('./imgs/hi-tea1.png'),
     description: (
       <span>
-        Sự kết hợp ăn ý giữa Đào cùng trà 100% hoa Hibiscus tự nhiên, tạo nên tổng thể hài hoà dễ
-        gây “thương nhớ” cho team thích món thanh mát, có vị chua nhẹ.
+        Cà phê cốt dừa hay còn gọi là cafe sữa dừa là thức uống có hương vị độc đáo. Thức uống này
+        có hương béo ngậy của dừa, vị ngọt của sữa pha vị đậm đà của cafe.
       </span>
     ),
   },
   {
-    name: 'Hi-Tea Vải',
+    name: 'Lá nếp cốt dừa',
     urlImage: require('./imgs/hi-tea2.png'),
     description: (
       <span>
-        Chút ngọt ngào của Vải, mix cùng vị chua thanh tao từ trà hoa Hibiscus, mang đến cho bạn
-        thức uống đúng chuẩn vừa ngon, vừa healthy.
+        Lá nếp hay còn gọi là cây cơm nếp được biết đến là gia vị làm tăng thêm hương vị thơm ngon
+        cho các món ăn. Ngoài ra, nó còn được làm thành nước cốt lá dứa để uống có hiệu quả tốt đối
+        với sức khỏe của chúng ta.
       </span>
     ),
   },
   {
-    name: 'Hi-Tea Yuzu',
+    name: 'Cookies đá xay',
     urlImage: require('./imgs/hi-tea3.png'),
     description: (
       <span>
-        Không chỉ nổi bật với sắc đỏ đặc trưng từ trà hoa Hibiscus, Hi-Tea Yuzu còn gây ấn tượng với
-        topping Yuzu (quýt Nhật) lạ miệng, kết hợp cùng trân châu trắng dai giòn sần sật, nhai vui
-        vui.
+        Cookie đá xay là sự kết hợp hương vị hoàn hảo của những chiếc bánh cookie truyền thống với
+        đá xay mát lạnh. Thêm vào đó là lớp kem phủ trắng mịn, béo ngậy bên trên.
       </span>
     ),
   },
   {
-    name: 'Hi-Tea Đá Tuyết Xoài Đào',
+    name: 'Trà chanh leo ổi hồng',
     urlImage: require('./imgs/hi-tea4.png'),
     description: (
       <span>
-        Những miếng đào vàng ươm kết hợp với đá tuyết vị xoài mát lành, cùng nền trà hoa Hibiscus
-        chua dịu đem đến cảm giác lạ miệng, hấp dẫn đến tận ngụm cuối cùng.
+        Trà ổi hồng nguyên bản có vị chua ngọt, thơm mùi hoa nhài, nồng nàn vị ổi hồng. Thực hiện
+        theo các bước sau bạn sẽ có một ly trà màu hồng mát lạnh và ngon tuyệt.
       </span>
     ),
   },
   {
-    name: 'Hi-Tea Đá Tuyết Yuzu Vải',
+    name: 'Matcha đá xay',
     urlImage: require('./imgs/hi-tea5.png'),
     description: (
       <span>
-        Vị trà hoa Hibiscus chua chua, kết hợp cùng đá xay Yuzu mát lạnh tái tê thêm miếng vải căng
-        mọng, ngọt ngào sẽ khiến bạn thích thú ngay từ lần thử đầu tiên.
+        Matcha đá xay mát lạnh, thơm béo hòa quyện cùng vị ngọt đắng đặc trưng từ bột matcha đem đến
+        cho bạn một món thức uống thơm ngon khó cưỡng.
       </span>
     ),
+  },
+];
+
+export const listVNCoffee: ListTeaCoffeeType[] = [
+  {
+    name: 'Cafe Đen',
+    price: 38000,
+    urlImage: require('./imgs/fe-vn1.png'),
+    path: '/products/1',
+  },
+  {
+    name: 'Cafe Nâu',
+    price: 38000,
+    urlImage: require('./imgs/fe-vn2.png'),
+    path: '/products/2',
+  },
+  {
+    name: 'Bạc Sỉu',
+    price: 48000,
+    urlImage: require('./imgs/fe-vn3.png'),
+    path: '/products/2',
+  },
+];
+
+export const listColdBrewCoffee: ListTeaCoffeeType[] = [
+  {
+    name: 'Cold Brew Hawai',
+    price: 45000,
+    salePrice: 37000,
+    urlImage: require('./imgs/cold-brew1.png'),
+    path: '/products/1',
+  },
+  {
+    name: 'Cold Brew Balo',
+    price: 49000,
+    salePrice: 39000,
+    urlImage: require('./imgs/cold-brew2.png'),
+    path: '/products/2',
+  },
+];
+
+export const listMachineCoffee: ListTeaCoffeeType[] = [
+  {
+    name: 'Amaretto',
+    price: 68000,
+    urlImage: require('./imgs/cafe-may1.png'),
+    path: '/products/1',
+  },
+  {
+    name: 'Mocaccino',
+    price: 68000,
+    urlImage: require('./imgs/cafe-may2.png'),
+    path: '/products/2',
+  },
+  {
+    name: 'Alpenlibe',
+    price: 69000,
+    urlImage: require('./imgs/cafe-may3.png'),
+    path: '/products/2',
+  },
+  {
+    name: 'Americano',
+    price: 48000,
+    urlImage: require('./imgs/cafe-may4.png'),
+    path: '/products/2',
+  },
+  {
+    name: 'Almond Milk Caffe Latte',
+    price: 68000,
+    urlImage: require('./imgs/cafe-may5.png'),
+    path: '/products/2',
+  },
+  {
+    name: 'Almond Milk Tea macchiato',
+    price: 68000,
+    urlImage: require('./imgs/cafe-may6.png'),
+    path: '/products/2',
   },
 ];

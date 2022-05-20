@@ -12,6 +12,7 @@ export const slider = {
 
 export const banner = {
   coffee: require('./imgs/banner-coffee-page.png'),
+  comingSoon: require('./imgs/coming-soon.png'),
 };
 
 export type ListTeaCoffeeType = {
@@ -142,6 +143,7 @@ export type ListHiTeaCoffeeType = {
   name: string;
   description: string | React.ReactNode;
   urlImage: string;
+  path: string;
 };
 export const listHiTeaCoffee: ListHiTeaCoffeeType[] = [
   {
@@ -153,6 +155,7 @@ export const listHiTeaCoffee: ListHiTeaCoffeeType[] = [
         có hương béo ngậy của dừa, vị ngọt của sữa pha vị đậm đà của cafe.
       </span>
     ),
+    path: '/products/1',
   },
   {
     name: 'Lá nếp cốt dừa',
@@ -164,6 +167,7 @@ export const listHiTeaCoffee: ListHiTeaCoffeeType[] = [
         với sức khỏe của chúng ta.
       </span>
     ),
+    path: '/products/1',
   },
   {
     name: 'Cookies đá xay',
@@ -174,6 +178,7 @@ export const listHiTeaCoffee: ListHiTeaCoffeeType[] = [
         đá xay mát lạnh. Thêm vào đó là lớp kem phủ trắng mịn, béo ngậy bên trên.
       </span>
     ),
+    path: '/products/1',
   },
   {
     name: 'Trà chanh leo ổi hồng',
@@ -184,6 +189,7 @@ export const listHiTeaCoffee: ListHiTeaCoffeeType[] = [
         theo các bước sau bạn sẽ có một ly trà màu hồng mát lạnh và ngon tuyệt.
       </span>
     ),
+    path: '/products/1',
   },
   {
     name: 'Matcha đá xay',
@@ -194,6 +200,84 @@ export const listHiTeaCoffee: ListHiTeaCoffeeType[] = [
         cho bạn một món thức uống thơm ngon khó cưỡng.
       </span>
     ),
+    path: '/products/1',
+  },
+];
+
+export const listVNCoffee: ListTeaCoffeeType[] = [
+  {
+    name: 'Cafe Đen',
+    price: 38000,
+    urlImage: require('./imgs/fe-vn1.png'),
+    path: '/products/3',
+  },
+  {
+    name: 'Cafe Nâu',
+    price: 38000,
+    urlImage: require('./imgs/fe-vn2.png'),
+    path: '/products/3',
+  },
+  {
+    name: 'Bạc Sỉu',
+    price: 48000,
+    urlImage: require('./imgs/fe-vn3.png'),
+    path: '/products/3',
+  },
+];
+
+export const listColdBrewCoffee: ListTeaCoffeeType[] = [
+  {
+    name: 'Cold Brew Hawai',
+    price: 45000,
+    salePrice: 37000,
+    urlImage: require('./imgs/cold-brew1.png'),
+    path: '/products/1',
+  },
+  {
+    name: 'Cold Brew Balo',
+    price: 49000,
+    salePrice: 39000,
+    urlImage: require('./imgs/cold-brew2.png'),
+    path: '/products/2',
+  },
+];
+
+export const listMachineCoffee: ListTeaCoffeeType[] = [
+  {
+    name: 'Amaretto',
+    price: 68000,
+    urlImage: require('./imgs/cafe-may1.png'),
+    path: '/products/4',
+  },
+  {
+    name: 'Mocaccino',
+    price: 68000,
+    urlImage: require('./imgs/cafe-may2.png'),
+    path: '/products/4',
+  },
+  {
+    name: 'Alpenlibe',
+    price: 69000,
+    urlImage: require('./imgs/cafe-may3.png'),
+    path: '/products/4',
+  },
+  {
+    name: 'Americano',
+    price: 48000,
+    urlImage: require('./imgs/cafe-may4.png'),
+    path: '/products/4',
+  },
+  {
+    name: 'Almond Milk Caffe Latte',
+    price: 68000,
+    urlImage: require('./imgs/cafe-may5.png'),
+    path: '/products/4',
+  },
+  {
+    name: 'Almond Milk Tea macchiato',
+    price: 68000,
+    urlImage: require('./imgs/cafe-may6.png'),
+    path: '/products/4',
   },
 ];
 

@@ -29,6 +29,8 @@ type ItemSizeType = {
 
 type ToppingsType = ItemSizeType;
 
+const initialPage = 0;
+
 const ProductDetailContainer = () => {
   const [size, setSize] = useState<ItemSizeType>({} as ItemSizeType);
   const [topping, setTopping] = useState<ToppingsType>({} as ToppingsType);
@@ -61,11 +63,14 @@ const ProductDetailContainer = () => {
   }, [res]);
 
   useEffect(() => {
-    let pos = 0;
-    if (res) {
-      pos = res.data.urlImages.indexOf(imageSlide);
-    }
     if (carouselRef.current) {
+      carouselRef.current.goTo(initialPage);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (carouselRef.current && res) {
+      const pos = res.data.urlImages.indexOf(imageSlide);
       carouselRef.current.goTo(pos);
     }
   }, [imageSlide, res]);

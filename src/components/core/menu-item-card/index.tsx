@@ -1,6 +1,7 @@
 import { Button, RowProps } from 'antd';
 import clsx from 'clsx';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 
 import { ListHiTeaCoffeeType } from 'src/assets/images';
 import styles from './menu-item-card.module.scss';
@@ -10,6 +11,12 @@ interface MenuItemCardProps extends RowProps {
 }
 
 const MenuItemCard = ({ data, ...props }: MenuItemCardProps) => {
+  const router = useRouter();
+
+  const handleRedirectToPath = () => {
+    router.push(data.path);
+  };
+
   return (
     <div {...props} className={clsx(styles.menuCardItem, 'flex flex-col', props.className)}>
       <div>
@@ -17,7 +24,9 @@ const MenuItemCard = ({ data, ...props }: MenuItemCardProps) => {
       </div>
       <p className="text-18 font-semibold mb-[6px]">{data.name}</p>
       <p>{data.description}</p>
-      <Button className={styles.buttonDetail}>Tìm hiểu thêm</Button>
+      <Button className={styles.buttonDetail} onClick={handleRedirectToPath}>
+        Tìm hiểu thêm
+      </Button>
     </div>
   );
 };

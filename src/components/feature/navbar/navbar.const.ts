@@ -32,44 +32,44 @@ export const navbarConfig: NavbarType[] = [
       {
         id: `${menuKey}`,
         name: 'Tất cả',
-        path: `/collections/${menuKey}`,
+        path: `/collections/${menuKey}?key=${menuKey}`,
       },
       {
         id: `${coffeeMenuKey}`,
         name: 'Cà Phê',
-        path: `/collections/${coffeeMenuKey}`,
+        path: `/collections/${coffeeMenuKey}?key=${coffeeMenuKey}`,
         grandChild: [
           {
             id: `${vnCoffeeMenuKey}`,
             name: 'Cà Phê Việt Nam',
-            path: `/collections/${vnCoffeeMenuKey}`,
+            path: `/collections/${vnCoffeeMenuKey}?isChild=true&key=${coffeeMenuKey}`,
           },
           {
             id: `${machineCoffeeMenuKey}`,
             name: 'Cà Phê Máy',
-            path: `/collections/${machineCoffeeMenuKey}`,
+            path: `/collections/${machineCoffeeMenuKey}?isChild=true&key=${coffeeMenuKey}`,
           },
           {
             id: `${coldBrewCoffeeMenuKey}`,
             name: 'Cold Brew',
-            path: `/collections/${coldBrewCoffeeMenuKey}`,
+            path: `/collections/${coldBrewCoffeeMenuKey}?isChild=true&key=${coffeeMenuKey}`,
           },
         ],
       },
       {
         id: `${atHomeMenuKey}`,
         name: 'Tại nhà',
-        path: `/collections/${atHomeMenuKey}`,
+        path: `/collections/${atHomeMenuKey}?key=${atHomeMenuKey}`,
         grandChild: [
           {
             id: `${coffeeAtHomeMenuKey}`,
             name: 'Cà phê tại nhà',
-            path: `/collections/${coffeeAtHomeMenuKey}`,
+            path: `/collections/${coffeeAtHomeMenuKey}?key=${coffeeAtHomeMenuKey}`,
           },
           {
             id: `${giftCollectionsMenuKey}`,
             name: 'Bộ sưu tập quà tặng',
-            path: `/collections/${giftCollectionsMenuKey}`,
+            path: `/collections/${giftCollectionsMenuKey}?key=${giftCollectionsMenuKey}`,
           },
         ],
       },

@@ -20,7 +20,8 @@ const Footer = () => {
       className={clsx(
         'bg-[#000000D9] text-[#fff] mt-10 w-full',
         isFooterBottom && 'absolute bottom-0',
-      )}>
+      )}
+    >
       <CustomContainer>
         <Row className="py-10">
           {footerConfig.map(({ title, detailContract }, index) => (

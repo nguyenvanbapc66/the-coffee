@@ -7,7 +7,8 @@ export const CloseIcon = ({ ...props }: React.SVGProps<SVGSVGElement>) => {
       width="14.584"
       height="14.584"
       viewBox="0 0 14.584 14.584"
-      {...props}>
+      {...props}
+    >
       <path
         id="Icon_material-close"
         data-name="Icon material-close"

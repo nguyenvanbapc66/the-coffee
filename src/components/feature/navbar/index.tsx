@@ -114,7 +114,8 @@ const Navbar = () => {
               <div key={nav.id} className="mr-5 font-semibold dropdown">
                 <div
                   className="flex flex-row items-center select-none cursor-pointer hover:text-3698FC transition-colors delay-100 ease-in-out"
-                  onClick={() => handleOpenDropdown(nav.id)}>
+                  onClick={() => handleOpenDropdown(nav.id)}
+                >
                   {nav.name} <CaretDownIcon width={10} height={10} className="ml-1 mt-1" />
                 </div>
                 {storeDropdown.isOpen && storeDropdown.dropdownPops === nav.id && nav.children && (
@@ -127,7 +128,8 @@ const Navbar = () => {
                               className={clsx(
                                 'text-16',
                                 pathname.includes(navItem.id) && 'text-3698FC',
-                              )}>
+                              )}
+                            >
                               {navItem.name}
                             </a>
                           </Link>
@@ -141,7 +143,8 @@ const Navbar = () => {
                                     className={clsx(
                                       styles.grandItemContent,
                                       pathname.includes(navGrandChild.id) && 'text-[#ea8025]',
-                                    )}>
+                                    )}
+                                  >
                                     {navGrandChild.name}
                                   </a>
                                 </Link>

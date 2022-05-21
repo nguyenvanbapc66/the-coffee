@@ -13,7 +13,8 @@ const OptionSelect = ({ children, isActive, ...props }: OptionSelectProps) => {
   return (
     <div
       className={clsx(styles.optionSelect, isActive && styles.active, props.className)}
-      {...props}>
+      {...props}
+    >
       {children}
     </div>
   );

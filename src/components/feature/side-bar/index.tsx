@@ -30,7 +30,8 @@ const SideBar = ({ children }: SideBarProps) => {
             <div className={styles.title} key={item.key}>
               <p
                 className="py-2 flex items-center cursor-pointer select-none hover:opacity-70"
-                onClick={() => handleClickRedirect(item.path, item.key)}>
+                onClick={() => handleClickRedirect(item.path, item.key)}
+              >
                 {item.key.includes(keyQuery) ? (
                   <>
                     <CaretRightIcon
@@ -42,7 +43,8 @@ const SideBar = ({ children }: SideBarProps) => {
                       className={clsx(
                         'pl-1 text-[16px]',
                         !isChildren ? 'text-[#ea8025]' : 'text-[#000] ',
-                      )}>
+                      )}
+                    >
                       {item.title}
                     </span>
                   </>
@@ -59,7 +61,8 @@ const SideBar = ({ children }: SideBarProps) => {
                         'py-2 cursor-pointer select-none hover:opacity-70',
                         pathname.includes(itemChild.key) && 'text-[#ea8025]',
                       )}
-                      onClick={() => handleClickRedirect(itemChild.path, item.key, true)}>
+                      onClick={() => handleClickRedirect(itemChild.path, item.key, true)}
+                    >
                       {itemChild.title}
                     </li>
                   ))}

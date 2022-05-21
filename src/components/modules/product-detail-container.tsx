@@ -154,7 +154,8 @@ const ProductDetailContainer = () => {
                     <OptionSelect
                       key={index}
                       isActive={size.name === name}
-                      onClick={() => setSize({ name, addingPrice: addingPrice ?? 0 })}>
+                      onClick={() => setSize({ name, addingPrice: addingPrice ?? 0 })}
+                    >
                       {content}
                     </OptionSelect>
                   );
@@ -183,7 +184,8 @@ const ProductDetailContainer = () => {
                             addingPrice: addingPrice ?? 0,
                           });
                         }
-                      }}>
+                      }}
+                    >
                       {content}
                     </OptionSelect>
                   );
@@ -191,7 +193,8 @@ const ProductDetailContainer = () => {
               </div>
               <Button
                 className={clsx('w-[100%] mt-8', styles.buttonShip)}
-                onClick={handleOpenPopup}>
+                onClick={handleOpenPopup}
+              >
                 <div className="flex justify-center items-center">
                   <CarShipIcon width={20} height={20} fill="#fff" />
                   <p className="pl-3">Đặt giao tận nơi</p>

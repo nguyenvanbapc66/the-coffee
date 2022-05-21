@@ -23,7 +23,8 @@ const MenuItemCategory = ({ data, size, resizeImage, ...props }: MenuItemCategor
               styles.menuItem,
               resizeImage,
               size === 'large' ? 'md:w-[270px] sm:w-[170px]' : '',
-            )}>
+            )}
+          >
             <Image src={data.urlImage} />
           </div>
           <p className="font-semibold pt-3">{data.name}</p>
@@ -34,7 +35,8 @@ const MenuItemCategory = ({ data, size, resizeImage, ...props }: MenuItemCategor
       )}
       <p
         className={`font-medium pt-1 ${data.salePrice && 'line-through'}`}
-        style={{ color: 'rgba(0, 0, 0, 0.6)' }}>
+        style={{ color: 'rgba(0, 0, 0, 0.6)' }}
+      >
         {formatPrice(data.price)} đ
       </p>
     </div>

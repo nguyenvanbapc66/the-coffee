@@ -30,12 +30,7 @@ export const footerConfig: FooterConfigType[] = [
     ),
     detailContract: [
       {
-        name: (
-          <span className="text-14 max-w-">
-            Tầng 3-4 Hub Building <br /> 195/10E Điện Biên Phủ, P.15 , <br /> Q.Bình Thạnh, TP.Hồ
-            Chí Minh
-          </span>
-        ),
+        name: <span className="text-14 max-w-">167 Nguyễn Văn Cừ, Tp Vinh</span>,
       },
     ],
   },

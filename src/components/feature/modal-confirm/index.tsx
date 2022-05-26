@@ -7,7 +7,7 @@ import styles from './modal-confirm.module.scss';
 import { DataConfirmType } from '@components/modules/product-detail-container';
 import { modalConfirmApi } from 'src/services/modal-confirm.services';
 import Image from 'next/image';
-import { formatPrice, getDataFromStorage, setDataToStorage } from 'src/utils/helpers';
+import { formatPrice, getDataFromStorage, isEmpty, setDataToStorage } from 'src/utils/helpers';
 import { sleep } from 'src/utils/async-helpers';
 import { dataShippingStorageKey } from 'src/constants/route.const';
 
@@ -50,9 +50,10 @@ const ModalConfirm = ({ setOpenPopup, dataConfirm, ...props }: ModalConfirmProps
         address,
         price: formatPrice(dataConfirm.price) + ' đ',
         size: dataConfirm.size,
-        topping: dataConfirm.topping
-          ? `${dataConfirm.topping.name} + ${formatPrice(dataConfirm.topping.addingPrice)}đ`
-          : '',
+        topping:
+          !isEmpty(dataConfirm.topping) && dataConfirm.topping.addingPrice !== 0
+            ? `${dataConfirm.topping.name} + ${formatPrice(dataConfirm.topping.addingPrice)}đ`
+            : '',
       };
       if (dataStorage) {
         const newDataShipping = [...dataStorage, dataShipping];
@@ -74,8 +75,7 @@ const ModalConfirm = ({ setOpenPopup, dataConfirm, ...props }: ModalConfirmProps
         className={styles.buttonSave}
         onClick={onOk}
         disabled={disabledButton}
-        loading={isSuccessConfirm}
-      >
+        loading={isSuccessConfirm}>
         Xác nhận
       </Button>,
     ];
@@ -131,8 +131,7 @@ const ModalConfirm = ({ setOpenPopup, dataConfirm, ...props }: ModalConfirmProps
       title="Thông Tin Giao Hàng"
       footer={customizeFooter()}
       className="confirm-modal"
-      {...props}
-    >
+      {...props}>
       <div className="flex gap-3">
         <Select
           showSearch
@@ -143,8 +142,7 @@ const ModalConfirm = ({ setOpenPopup, dataConfirm, ...props }: ModalConfirmProps
           allowClear
           optionFilterProp="children"
           filterOption={true}
-          className="w-full max-w-[30%]"
-        >
+          className="w-full max-w-[30%]">
           {!isLoading ? (
             data &&
             data.map(({ code, name }) => (
@@ -164,8 +162,7 @@ const ModalConfirm = ({ setOpenPopup, dataConfirm, ...props }: ModalConfirmProps
           allowClear
           optionFilterProp="children"
           filterOption={true}
-          className="w-full max-w-[30%]"
-        >
+          className="w-full max-w-[30%]">
           {!!dataDistrict?.districts?.length &&
             dataDistrict.districts.map(({ code, name }) => (
               <Select.Option key={`${code}:${name}`}>{name}</Select.Option>
@@ -181,8 +178,7 @@ const ModalConfirm = ({ setOpenPopup, dataConfirm, ...props }: ModalConfirmProps
           allowClear
           optionFilterProp="children"
           filterOption={true}
-          className="w-full max-w-[40%]"
-        >
+          className="w-full max-w-[40%]">
           {!!dataCommune?.wards?.length &&
             dataCommune.wards.map(({ code, name }) => (
               <Select.Option key={`${code}:${name}`}>{name}</Select.Option>
@@ -206,8 +202,7 @@ const ModalConfirm = ({ setOpenPopup, dataConfirm, ...props }: ModalConfirmProps
           </p>
           <div
             className="my-2"
-            style={{ background: 'rgba(196, 196, 196, 0.3)', color: 'rgb(102, 102, 102)' }}
-          >
+            style={{ background: 'rgba(196, 196, 196, 0.3)', color: 'rgb(102, 102, 102)' }}>
             <p className="text-14 pl-2 py-2">Size</p>
           </div>
           <p className="text-18 pl-4">{dataConfirm.size}</p>
@@ -215,8 +210,7 @@ const ModalConfirm = ({ setOpenPopup, dataConfirm, ...props }: ModalConfirmProps
             <>
               <div
                 className="my-2"
-                style={{ background: 'rgba(196, 196, 196, 0.3)', color: 'rgb(102, 102, 102)' }}
-              >
+                style={{ background: 'rgba(196, 196, 196, 0.3)', color: 'rgb(102, 102, 102)' }}>
                 <p className="text-14 pl-2 py-2">Topping</p>
               </div>
               <p className="text-18 pl-4" style={{ color: 'rgb(38, 38, 38)' }}>

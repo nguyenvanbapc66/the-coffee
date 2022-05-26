@@ -20,7 +20,7 @@ const MachineCoffeeContainer = () => {
           <Image src={slider.image1} />
         </div>
         <div>
-          <p className="text-[24px] font-bold py-5">Cold Brew</p>
+          <p className="text-[24px] font-bold py-5">Cà phê máy</p>
           <div className={styles.menuList}>{renderListPacketCoffee()}</div>
         </div>
       </SideBar>

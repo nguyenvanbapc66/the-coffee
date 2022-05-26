@@ -77,7 +77,7 @@ export const listPacketCoffee: ListTeaCoffeeType[] = [
   },
   {
     name: 'Cà Phê Sữa Đá Hòa Tan Hộp 10 gói',
-    price: 44000,
+    price: 100000,
     salePrice: 39000,
     urlImage: require('./imgs/packet-coffee3.png'),
     path: '/products/2',

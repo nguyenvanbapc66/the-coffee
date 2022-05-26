@@ -26,8 +26,8 @@ export const productDataResponse: ProductDataResponseType[] = [
       name: 'Cà phê cốt dừa',
       urlImages: [
         require('../assets/imgs/hi-tea1.png'),
-        require('../assets/imgs/hi-tea-slide2.png'),
-        require('../assets/imgs/hi-tea-slide3.png'),
+        require('../assets/imgs/detail1.png'),
+        require('../assets/imgs/detail2.png'),
       ],
       price: 45000,
       discount: '35%',
